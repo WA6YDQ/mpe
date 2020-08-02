@@ -1,0 +1,23 @@
+RENAME path/file path/newname
+
+RENAME renames file to newname.
+
+The rename command can also move a file
+from its current directory to a new 
+directory. 
+
+path is only needed if file is outside
+the current directory.
+
+You must have access permissions
+on the file, original directory and (if needed)
+the new directory as well. An error will be
+displayed if you do not have permissions.
+
+Example: 
+rename file.txt file.backup
+rename file.c backups/file.c
+
+If the file or path does not exist an error will
+be displayed and no action will occur.
+

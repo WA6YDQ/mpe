@@ -1,0 +1,9 @@
+PUBLIC [path/file] [path/file] ...
+
+Set permissions on file to public. Other
+users will be able to view files when set 
+to public. Does not change public execute 
+permissions or set write permissions to the
+public.
+
+

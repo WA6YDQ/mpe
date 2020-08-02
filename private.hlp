@@ -1,0 +1,7 @@
+PRIVATE [path/file] [path/file] ...
+
+Set permissions to private on path/file.
+No other user will be able to read/modify
+the file when set to private. 
+
+

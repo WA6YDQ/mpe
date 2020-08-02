@@ -1,0 +1,5 @@
+DUMP [file]
+
+Dump displays a hex dump of file. 
+
+

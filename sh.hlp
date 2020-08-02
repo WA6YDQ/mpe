@@ -1,0 +1,47 @@
+SH [debug]
+
+SH is the command interpreter and user 
+interface to the mpe operating system. 
+
+Type 'commands' to view the internal commands.
+
+Using the debug options is meant for developing
+purposes  and serves no practical use during
+normal operation.
+
+The shell expands wildcards: * ? ~ $[] `cmd`
+* replaces all files in the current directory
+? replaces a single character in a file
+~ expands to your login directory
+$[cmd] & `cmd` replaces the output of the cmd 
+\ escapes the next character (allows a space
+within a string).
+"" and '' keeps the shell from expanding anything 
+between the quotes. The shell also removes 
+the quotes from the final output.
+
+'reload' restarts the shell to the same point
+as if just logging in.
+
+Special Shell Variables:
+$@ expands SHELL variable to the shell path.
+$* expands to show all the shell variables.
+$$ expands to the PID of the shell program.
+
+NOTES: 
+
+$[x] where x is any character other than @,* or $ is 
+undefined.
+
+If # is at position 0 on a line, the line is ignored.
+
+--- Typing after the OK> prompt --- 
+
+You can use emacs movement and editing commands while 
+typing. Using the up/down arrow keys scrolls through the
+history buffer. The left/right arrow keys moves the cursor 
+along the line. CTRL-U deletes the current line from the 
+cursor back. 'Backspace' deletes the left character and moves
+one position left.
+
+

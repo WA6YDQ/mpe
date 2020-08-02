@@ -1,0 +1,16 @@
+CONCAT file1 file2 [file3] [file4] ...
+
+Add file2 through ... to the end of file1. File2 
+et al remains unchanged.
+
+If file 1 does not exist an error will be reported.
+If needed, create an empty file using the 'new' command.
+
+Example: new file1
+
+If file2, file3, etc are not readable an error will 
+be displayed and the next file in the list will be used.
+If no files after file1 exist no change will happen
+to file1.
+
+

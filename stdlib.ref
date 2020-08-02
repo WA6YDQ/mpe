@@ -1,0 +1,22 @@
+STDLIB.ref
+
+float atof(char *);
+float strtod(char *,char **);
+int atoi(char *);
+int atol(char *);
+int strtol(char *,char **,int);
+int strtoul(char *,char **,int);
+void *malloc(int);
+void *calloc(int,int);
+void *realloc(void *,int);
+void free(void *);
+int rand();
+void srand(int);
+void abort();
+void exit(int);
+char *getenv(char *);
+int system(char *);
+int abs(int);
+int labs(int);
+div_t div(int);
+ldiv_t ldiv(int);

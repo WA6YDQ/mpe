@@ -1,0 +1,10 @@
+RMDUP [infile] [outfile]
+
+RMDUP removes duplicate lines and empty lines
+from infile and writes the output (modified file)
+to outfile.
+
+You will see an error if infile is not readable and/or
+outfile is not writable.
+
+

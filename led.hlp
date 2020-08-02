@@ -1,0 +1,36 @@
+LED [existing file]
+
+LED is a line editor. The user is
+started in append mode when LED is started.
+
+If LED is started with an existing file, the file will
+be loaded and append starts at the end of the file.
+
+Commands are preceeded by a '.' on an otherwise empty line.
+
+Commands are:
+
+.q                  Quit w/o save
+.e                  Exit w/save (prompts for file name)
+.undo               Undo the last buffer-changing command
+.l [start#][end#]   List buffer. line#'s are optional
+.s  filename        Save buffer to named file
+.f  string          Find/display string in the buffer
+.d  line#           Delete line number
+.x  line#           Cut the line from the buffer to the clipboard
+.c  line#           Copy the line to the clipboard
+.p  line#           Paste the clipboard before line#
+.i  line#           Insert before line #, .q to stop insert
+.r  line# old new   Replace (once) old with new starting at line#
+.ra line# old new   Replace All occurances of old with new starting at line#
+.h  .?              Shows these help lines.
+.bak                Save buffer to backup file (editPID.bak)
+.os                 Drop to a command prompt: type 'exit' to return to the editor
+
+The following prompts are shown during operation:
+>                   Append prompt. Typing here appnds to the end of the buffer.
+insert>             Insert prompt. Typing here inserts text before the given line #.
+NOTE: commands can be either UPPER or lower case.
+
+
+

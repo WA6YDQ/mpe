@@ -1,0 +1,8 @@
+READONLY [path/file] [path/file] ...
+
+Set permissions of file to read only.
+No one (users/others) will be able to 
+write to or delete the file when permissions
+are set to readonly.
+
+

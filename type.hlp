@@ -1,0 +1,16 @@
+TYPE [path/file]
+
+The type command displays a text file
+a page at a time. If the file is smaller
+than one page, the file will be displayed 
+on one text screen. If the file is larger
+a --- MORE --- line will be displayed on the
+bottom of the screen. Pressing the enter
+key will display another page of text.
+
+If you want to stop the display, press 
+the q key and the enter key and the display
+will stop and you will be returned to the 
+command prompt.
+
+

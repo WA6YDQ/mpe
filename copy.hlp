@@ -1,0 +1,9 @@
+COPY [path/source] [path/destination]
+
+Copy a file to a new path. 
+
+[path] is only needed when changing 
+directory locations. 
+
+Example: copy file1.txt old/file1.bak
+

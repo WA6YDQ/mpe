@@ -1,0 +1,10 @@
+NEW [path/file]
+
+Create a new, empty regular file. 
+More than one file can created at a time.
+Path (a directory) must already exist.
+It will not be created. It defaults to the 
+current directory.
+
+Example: new file1.txt file2.txt newdir/test.txt
+

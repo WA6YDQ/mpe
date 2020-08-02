@@ -1,0 +1,7 @@
+SLIST file
+
+SLIST displays a file to the stdout device.
+File should be an ascii text file or garbage 
+will be seen.
+
+

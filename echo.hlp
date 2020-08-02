@@ -1,0 +1,14 @@
+ECHO [arg] [arg] ...
+
+ECHO displays on stdout the arguments on the
+command line, including the shell-expanded
+arguments.
+
+Example: 
+echo *		Show all files in current directory
+echo $PWD	Show contents of PWD variable
+
+
+ECHO by itself sends a newline and exits.
+
+

@@ -1,0 +1,16 @@
+BASIC [file]
+
+BASIC is a basic interpreter. When started without
+a filename BASIC shows a command prompt (>) and waits
+for user input. Typing 'exit' quits BASIC.
+
+When started with a valid basic source file, BASIC
+loads the file and executes the lines until an END
+statement is reached or until the user presses CTRL-C.
+
+When stopped, BASIC will show a command prompt (>) and wait
+for the user to enter more lines of code or enter a command.
+
+Typing 'exit' exits BASIC and returns control to mpesh.
+Typing 'run' starts program execution. 
+

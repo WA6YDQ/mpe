@@ -1,0 +1,25 @@
+CRYPT key infile outfile
+
+CRYPT encrypts/decrypts a file with a given key.
+
+The key can be any set of alphanumeric characters, 
+but should be more than 6 and must be less than 256 
+characters long. If the key contains spaces, escape
+the spaces with a '\' ie: happy\ camper
+or surround the key with quotes ie: "happy camper".
+
+CRYPT is symmetric - if infile is plain text, then 
+outfile will be encrypted. If infile is encrypted, outfile 
+will be plain text.
+
+If outfile already exists, CRYPT will stop with an
+error message. If infile doesn't exist, CRYPT will 
+show an error and stop.
+
+Examples:
+	crypt secret file file.enc
+	crypt secret file.enc file.dec
+
+In this case, file.dec will be the same as file.
+
+

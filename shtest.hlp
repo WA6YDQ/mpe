@@ -1,0 +1,9 @@
+SHTEST [cmds & strings]
+
+SHTEST shows the expanded result of options, 
+arguements and strings. Mostly used for shell debugging
+it can also be used to expand shell variables.
+
+Example: shtest *.c     shtest $TERM
+
+

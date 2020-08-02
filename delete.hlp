@@ -1,0 +1,18 @@
+DELETE [path/name]
+
+Delete one or more files or directories.
+Wildcards are expanded by the shell. 
+
+If directory is not empty an error
+will be displayed. If name applies
+to both a file and directory results
+are undefined.
+
+An error occurs if you don't own the file
+or directory, or if the file or directory
+is marked as read only.
+
+Example: 
+delete file1 file2 newdir/test.txt
+delete *.txt
+

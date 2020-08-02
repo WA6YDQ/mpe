@@ -1,0 +1,21 @@
+INTERNAL  
+
+Internal commands for the mpesh command processor.
+
+exit, lo        Logoff and exit the system 
+prompt          Toggle the prompt from short to long 
+commands        Display this listing 
+ver             Show the shell's current version & build date 
+pwd             Show the current working directory 
+path            Show the executable path 
+cls, ctrl-L     Clear the screen     
+clear           Clear the screen     
+cd              Change directory     
+up              Go up one directory level 
+pushd           Save current directory on stack 
+popd            Change to directory on stack, clears stack 
+date            Show the current time and date 
+times           Show the connect time since login 
+help            Show external commands, help summary
+
+

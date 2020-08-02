@@ -1,0 +1,19 @@
+TIME.ref
+
+typedef int time_t;
+typedef int clock_t;
+
+char *asctime(struct tm *);
+time_t clock();
+char *ctime(int *);
+double difftime(int, int);
+struct tm *gmtime(int *);
+struct tm *localtime(int *);
+int mktime(struct tm *ptm);
+int time(int *);
+int strftime(char *, int, char *, struct tm *);
+char *strptime(char *, char *, struct tm *);
+struct tm *gmtime_r(int *, struct tm *);
+int timegm(struct tm *);
+
+

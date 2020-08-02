@@ -1,0 +1,14 @@
+The *.hlp files in this directory are the help files
+for the mpe commands. 
+
+The *.c files are the operating commands and shell for the
+mpe operating system.
+
+The *.ref files are picoc library defines.
+
+The executables picoc and basic are language interpreters
+written by a third-party and included in the mpe 
+operating system. Picoc is a c language interpreter.
+Basic is a basic language interpreter.
+
+

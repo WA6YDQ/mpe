@@ -1,0 +1,6 @@
+CREATE [path/name]
+
+Create a new directory. Fails if
+name already exists.
+
+

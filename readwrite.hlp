@@ -1,0 +1,8 @@
+READWRITE [path/file] [path/file] ...
+
+Set permissions on file to read and write.
+When permissions are set this way, owners
+will be able to read, write and delete the file. 
+Others will only be able to read the file.
+
+

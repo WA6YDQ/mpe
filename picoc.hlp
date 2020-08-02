@@ -1,0 +1,13 @@
+PICOC file.c
+
+PICOC is a small c interpreter. It is a small
+implementation of ISO-C. It does not compile 
+from c source code to an object file, but compiles and
+runs the .c source file on the fly.
+
+Example: picoc t1.c
+
+will compile and start execution of the source file t1.c
+
+Reference docs for picoc in /docs.
+

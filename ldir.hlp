@@ -1,0 +1,53 @@
+LDIR [path]
+
+Display a directory (long format).. If path is 
+not given display the current directory contents.
+If path is given, display the given directory.
+The directory will not be displayed if you do
+not have permissions to view it.
+
+The shell expands the following wildcards:
+
+*  replace '*' with any matching string.
+Example: 
+dir *.c  
+will display all files with an extension of .c
+
+?  replaces ? with a single character.
+Example: 
+dir t?.c  
+will display all files like: t1.c, t2.c, ta.c etc.
+
+~  expands to your home directory.
+Example: 
+dir ~  
+displays your home directory.
+dir ~/src   displays all the files under src 
+in your home directory.
+
+The displayed output will be in color if your
+terminal is capable of displaying colors.
+Regular files are in white, directories are in blue.
+Block special, character special and fifo's are in magenta
+and links are cyan. Executable regular files
+are in yellow.
+
+In the long format, each entry will be displayed on 
+it's own line in the format of:
+[t] [UID] [owner permissions] [other permissions] [size] [name]
+
+t: filetype. Will be :
+d	directory
+f	regular files
+sp	special files
+sl	symbolic link
+
+UID: User ID. A number from 0-65K
+
+Permissions is the form of Read Write Execute where '-'
+signifies that permission is not set.
+
+Size in bytes
+
+Name of file.
+

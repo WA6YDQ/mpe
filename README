@@ -1,3 +1,7 @@
+These are the user shell (sh/mpesh) and user commands 
+for the MPE operating system, used for the PMC minicomputer.
+
+
 The *.hlp files in this directory are the help files
 for the mpe commands. 
 
@@ -11,4 +15,6 @@ written by a third-party and included in the mpe
 operating system. Picoc is a c language interpreter.
 Basic is a basic language interpreter.
 
+Both these are available on github as Chipmunk Basic
+and PICOC but are not included in this repository.
 

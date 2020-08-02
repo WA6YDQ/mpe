@@ -37,6 +37,8 @@ fsblkcnt_t disk_avail;
 fsblkcnt_t f_bfree;
 char tmp[80];
 
+	return 0;		// currently this command does nothing
+
     green();
 
     /* show # users logged in */

@@ -1,7 +1,7 @@
 all		:	dir.o copy.o rename.o new.o create.o type.o delete.o led.o date.o \
 			readonly.o readwrite.o public.o private.o sh.o shtest.o \
 			status.o help.o concat.o qsort.o rmdup.o ldir.o dump.o getenv.o \
-			crypt.o echo.o slist.o
+			crypt.o echo.o slist.o submit.o
 
 		cc -o dir dir.o
 		cc -o copy copy.o
@@ -29,6 +29,7 @@ all		:	dir.o copy.o rename.o new.o create.o type.o delete.o led.o date.o \
 		cc -o crypt crypt.o
 		cc -o echo echo.o
 		cc -o slist slist.o
+		cc -o submit submit.o
 
 INSTALLDIR = /mini/mpe
 install	:
@@ -62,7 +63,7 @@ install	:
 		cp crypt ${INSTALLDIR}/cmds/crypt
 		cp echo ${INSTALLDIR}/cmds/echo
 		cp slist ${INSTALLDIR}/cmds/slist
-
+		cp submit ${INSTALLDIR}/cmds/submit
 
 
 
@@ -149,6 +150,10 @@ echo	:	echo.o
 slist	:	slist.o
 		cc -o slist slist.c
 
+submit	:	submit.o
+		cc -o submit submit.c
+
+
 
 # remove compilation files
 clean	:
@@ -212,5 +217,7 @@ echo.o	:	echo.c
 	cc -c ${FLAGS} echo.c
 slist.o	:	slist.c
 	cc -c ${FLAGS} slist.c
+submit.o	:	submit.c
+	cc -c ${FLAGS} submit.c
 
 

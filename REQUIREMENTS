@@ -1,0 +1,59 @@
+All of the source programs need to follow the following guidelines:
+
+
+OWNERSHIP
+
+Only the owner of a file can make a change to that file.
+
+All programs that modify, delete, or otherwise change a file MUST
+test ownership of the file at the start of the program. If the file
+is NOT owned by the user, the program must abort with an error message
+that the file is not owned by the user.
+
+Example:
+
+	   #include <sys/types.h>
+       #include <sys/stat.h>
+       #include <unistd.h>
+
+		struct stat buf;
+		uid_t uid;
+
+		/* see if we own it */
+        stat(argv[ct], &buf);
+        if ((buf.st_uid) != geteuid()) {
+            printf("%s not owner\n",argv[ct++]);
+            continue;
+        }
+
+
+		where argv[ct] contains the filename to be modified.
+
+
+
+RESPECT THE W FLAG
+
+The following ldir output shows read/write status of a file:
+
+f   2000 rw-  r--       16  file1
+
+The first rw- is owner permissions, the second r-- is permissions
+for everyone else (in this case, read only).
+
+In this case, the w flag is set for the owner. This flag MUST 
+be checked. When modifying or deleteing a file, the program MUST
+test the w flag. If it is NOT present, the program MUST NOT delete
+or otherwise modify the file. Only files with the w flag 
+can be modified or deleted.
+
+Example:
+
+		/* test if read only */
+        if (!(buf.st_mode & S_IWUSR)) {
+            printf("%s is read only\n",argv[ct++]);
+            continue;	// do not modify this file
+        }
+
+
+
+

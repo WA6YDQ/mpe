@@ -1,0 +1,7 @@
+To set the correct timezone:
+
+the file /system/timezone must contain a utc offset 
+for your local time. For East Coast U.S. use UTC+4.
+No spaces after, but \n is OK and expected.
+
+

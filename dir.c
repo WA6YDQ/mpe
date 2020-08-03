@@ -1,5 +1,6 @@
 /*
  * dir.c - simple dir lister
+ * (see ldir.c for long format)
  *
  * k theis 7/2020
  *

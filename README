@@ -1,5 +1,5 @@
 These are the user shell (sh/mpesh) and user commands 
-for the MPE operating system, used for the PMC minicomputer.
+for the MPE ver 4.xx operating system, used for the PMC minicomputer.
 
 
 The *.hlp files in this directory are the help files
@@ -17,4 +17,11 @@ Basic is a basic language interpreter.
 
 Both these are available on github as Chipmunk Basic
 and PICOC but are not included in this repository.
+
+make [command] builds just that command
+make all builds all commands
+sudo make install installs all the files in the needed places
+(in this case /mini/mpe/*) per INSTALLDIR
+
+Note: see REQUIREMENTS for the filesystem structure.
 

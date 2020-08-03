@@ -295,6 +295,20 @@ char dirname[MAXLINE];  // for push/pop
 	err = setenv("HOME","/users/guest",1);
 	if (err != 0) perror("setenv");
 
+	/* timezone read time offset from /system/timezone (manually set by sysadmin) */
+	tmpfile = fopen("/system/timezone","r");
+	if (tmpfile == NULL) 
+		puts("error reading system time");
+	else {
+		memset(BUF,0,20);
+		fgets(BUF,20,tmpfile);
+		BUF[strlen(BUF)-1] = '\0';
+		err = unsetenv("TZ");
+		if (err != 0) perror("unset tz");
+		err = setenv("TZ",BUF,1);
+		if (err != 0) perror("set tz");
+		fclose(tmpfile);
+	}
 
     while (loggedin) {
 /* ------------------------------- */
@@ -371,7 +385,7 @@ char dirname[MAXLINE];  // for push/pop
         m = s/60; h = m/60; d = h/24;
         s = s%60; m = m%60; h = h%24; d = d%60;
         green();
-        printf("\nlogged in at (UTC) %s",ctime(&logintime));
+        printf("\nlogged in at %s",ctime(&logintime));
         printf("connect time: %dd days %02d:%02d:%02d \n",d,h,m,s);
         free_pointers;
         white();

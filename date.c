@@ -14,6 +14,7 @@ char outstr[200];
 time_t t;
 struct tm *tmp;
 
+		tzset();	// read environment var TZ set by the shell
         t = time(NULL);
         tmp = localtime(&t);
  
@@ -27,7 +28,7 @@ struct tm *tmp;
                return 1;
         }
         green();
-        printf("\n%s UTC\n", outstr);
+        printf("\n%s\n", outstr);
         white();
         return 0;
 }

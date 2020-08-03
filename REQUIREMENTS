@@ -1,5 +1,28 @@
 All of the source programs need to follow the following guidelines:
 
+The filesystem structure is as follows:
+
+        |-- /
+		|
+		|-- cmds (holds all system executables)
+		|
+		|-- helpfiles (holds all files read by the help command)
+		|
+		|-- system (holds misc system config files, accounting info etc)
+		|
+		|-- docs (detailed instructions and manuals for commands etc)
+		|
+		|-- lib (holds system lib files)
+		|
+		|-- users (contains users home directories)
+			  |
+			  |-- user1
+			  |-- user2
+			  |-- user3 etc
+
+While other directories may be added later, these will always 
+be part of the filesystem.
+
 
 OWNERSHIP
 
@@ -22,7 +45,7 @@ Example:
 		/* see if we own it */
         stat(argv[ct], &buf);
         if ((buf.st_uid) != geteuid()) {
-            printf("%s not owner\n",argv[ct++]);
+            printf("%s not owner\n",argv[ct]);
             continue;
         }
 
@@ -50,7 +73,7 @@ Example:
 
 		/* test if read only */
         if (!(buf.st_mode & S_IWUSR)) {
-            printf("%s is read only\n",argv[ct++]);
+            printf("%s is read only\n",argv[ct]);
             continue;	// do not modify this file
         }
 
